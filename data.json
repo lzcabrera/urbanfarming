@@ -1,0 +1,189 @@
+var seasonArr = [{
+    "label": "Winter",
+    "time": 1
+}, {
+    "label": "Spring",
+    "time": 2
+}, {
+    "label": "Summer",
+    "time": 3
+}, {
+    "label": "Fall",
+    "time": 4
+}];
+
+var monthArr = [
+
+{
+    "label": "Jan",
+    "time": 2
+}, {
+    "label": "Feb",
+    "time": 3
+},
+
+{
+    "label": "Mar",
+    "time": 4,
+        "vegetables": ["chives",
+        "cucumber",
+        "snappeas"]
+},
+
+{
+    "label": "Apr",
+    "time": 5,
+        "vegetables": ["artichokes",
+        "asparagus",
+        "chives",
+        "cucumber",
+        "snappeas"]
+},
+
+{
+    "label": "May",
+    "time": 6,
+        "vegetables": ["artichokes",
+        "asparagus",
+        "chives",
+        "cucumber",
+        "snappeas"]
+},
+
+{
+    "label": "Jun",
+    "time": 7
+},
+
+{
+    "label": "Jul",
+    "time": 8,
+        "vegetables": ["artichokes",
+        "asparagus",
+        "chives",
+        "cucumber"]
+},
+
+{
+    "label": "Aug",
+    "time": 9,
+        "vegetables": ["artichokes",
+        "chives",
+        "cucumber"]
+},
+
+{
+    "label": "Sep",
+    "time": 10,
+        "vegetables": ["artichokes",
+        "chives",
+        "cucumber"]
+},
+
+{
+    "label": "Oct",
+    "time": 11,
+        "vegetables": ["chives"]
+}, {
+    "label": "Nov",
+    "time": 12,
+        "vegetables": ["chives"]
+}, {
+    "label": "Dec",
+    "time": 1
+}];
+
+var vegetableArr = [{
+    "label": "artichokes",
+        "info": [0, 0, 0, 0, 1, 1, 1, 1, 1, 1, 0, 0]
+}, {
+    "label": "asparagus",
+        "info": [0, 0, 0, 0, 1, 1, 1, 0, 0, 0, 0, 0]
+}, {
+    "label": "chives",
+        "info": [0, 0, 0, 1, 1, 1, 1, 1, 1, 1, 1, 1]
+}, {
+    "label": "cucumber",
+        "info": [0, 0, 0, 1, 1, 1, 1, 1, 1, 1, 0, 0]
+}, {
+    "label": "snappeas",
+        "info": [0, 0, 0, 0, 1, 1, 1, 0, 0, 0, 0, 0]
+}, {
+    "label": "greenbeans",
+        "info": [0, 0, 0, 0, 0, 0, 1, 1, 1, 1, 1, 0]
+}, {
+    "label": "mushrooms",
+        "info": [1, 0, 0, 0, 0, 1, 1, 1, 1, 1, 1, 1]
+}, {
+    "label": "newpotatoes",
+        "info": [0, 0, 0, 1, 1, 1, 1, 1, 1, 1, 0, 0]
+}, {
+    "label": "corn",
+        "info": [0, 0, 0, 0, 0, 0, 0, 1, 1, 1, 0, 0]
+}, {
+    "label": "eggplant",
+        "info": [0, 0, 0, 0, 0, 0, 0, 1, 1, 1, 0, 0]
+}, {
+    "label": "bellpeppers",
+        "info": [0, 0, 0, 0, 0, 0, 0, 1, 1, 1, 1, 0]
+}, {
+    "label": "okra",
+        "info": [0, 0, 0, 0, 0, 0, 0, 1, 1, 1, 1, 0]
+}, {
+    "label": "broccoli",
+        "info": [1, 1, 1, 1, 1, 0, 0, 0, 0, 0, 1, 1]
+}, {
+    "label": "squash",
+        "info": [1, 1, 1, 1, 0, 0, 0, 0, 0, 0, 1, 1]
+}, {
+    "label": "pumpkin",
+        "info": [1, 0, 0, 0, 0, 0, 0, 0, 0, 1, 1, 1]
+}, {
+    "label": "sweetpotatoes",
+        "info": [1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 1]
+}, {
+    "label": "carrots",
+        "info": [1, 1, 1, 1, 1, 1, 1, 0, 0, 1, 1, 1]
+}, {
+    "label": "turnip",
+        "info": [1, 1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 1]
+}, {
+    "label": "leeks",
+        "info": [1, 1, 1, 1, 1, 1, 0, 0, 0, 0, 0, 1]
+}, {
+    "label": "beets",
+        "info": [1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]
+}, {
+    "label": "broccolini",
+        "info": [1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]
+}, {
+    "label": "celery",
+        "info": [1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]
+}, {
+    "label": "chard",
+        "info": [1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]
+}, {
+    "label": "fennel",
+        "info": [1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]
+}, {
+    "label": "garlic",
+        "info": [1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]
+}, {
+    "label": "ginger",
+        "info": [1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]
+}, {
+    "label": "greens",
+        "info": [1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]
+}, {
+    "label": "onions",
+        "info": [1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]
+}, {
+    "label": "potatoes",
+        "info": [1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]
+}, {
+    "label": "spinach",
+        "info": [1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]
+}, {
+    "label": "sprouts",
+        "info": [1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]
+}];

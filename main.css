@@ -1,0 +1,103 @@
+			.main{
+				max-width:450px;
+				margin:0 auto;
+			}
+			h1{
+				text-align:center;
+			}
+			.graph-container{
+				width:250px;
+				float:left;
+			}
+			.chart-legend{
+				text-align:center;
+				margin-top:20px;
+			}
+			.square{
+				display:inline-block;
+				width:10px;
+				height:10px;
+				background:#9edae5;
+				margin-right:10px;
+
+			}
+			#vegetable-name{
+				font-weight:bold;
+			}
+			.chart {
+			   width:100%;
+			}
+			.listing{
+				width:37%;
+				float:left;
+				margin-left:5%;
+				
+			}
+
+			
+			.arc_winter, .arc_spring, .arc_summer, .arc_fall {
+			    fill:#969696;
+			}
+
+			.passive {
+			    fill:#fff;
+			}
+			.active {
+			    fill:#9edae5;
+			}
+
+		
+			.season-section {
+			    text-align:left;
+			}
+			
+			.season-section a{
+				color:#e54a4f;
+				text-decoration:none;
+			}
+			.season-section ul {
+				
+			    display:none;
+			    list-style-position: outside;
+			    list-style-type:disc;   
+			    margin-bottom:10px;
+			    padding-left:0;
+			    margin-top:5px;
+			    margin-left:40px;
+			}
+			.season-section ul li{
+				padding:3px 0px 3px 0px;
+			}
+			.season-section ul a{
+				color:#333;
+				padding:2px;
+			
+			}
+			.season-section ul a:hover{
+				text-decoration:underline;
+				background:#eaeaea;
+			}
+			.season-section h3{
+				font-size:1em;
+				border-radius:5px;
+				
+				display:inline-block;
+				padding:5px;
+				margin:0px;
+			}
+			.season-section h3 a{
+				background:url(expand-small-silver.png) no-repeat 0px 2px;
+				padding-left:20px;
+			}
+			.season-section h3 a:hover{
+				text-decoration:none;
+				display:block;
+				background:#000;
+				color:#fff;
+			}
+			.section-open h3 a{
+				background-image:url(collapse-small-silver.png);
+			}
+			.section-open ul {
+			    display:block;
+			}
