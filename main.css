@@ -1,9 +1,12 @@
+			body{font-family: 'Crafty Girls', cursive;}
 			.main{
-				max-width:450px;
+				max-width:500px;
 				margin:0 auto;
 			}
 			h1{
 				text-align:center;
+				font-family: 'Francois One', sans-serif;
+				color:#527604;
 			}
 			.graph-container{
 				width:250px;
@@ -12,6 +15,8 @@
 			.chart-legend{
 				text-align:center;
 				margin-top:20px;
+				font-family:Arial, Helvetica, sans-serif;
+				font-size:0.9em;
 			}
 			.square{
 				display:inline-block;
@@ -28,7 +33,7 @@
 			   width:100%;
 			}
 			.listing{
-				width:37%;
+				width:45%;
 				float:left;
 				margin-left:5%;
 				
@@ -46,36 +51,6 @@
 			    fill:#9edae5;
 			}
 
-			.active1{
-
-			}
-			.active2{
-
-			}
-			.active3{
-
-			}
-			.active4{
-
-			}
-			.active5{
-
-			}
-			.active6{
-
-				}
-			.actve7{
-
-			}
-			.active8{
-
-			}
-			.active9{
-
-			}
-			.active10{
-				
-			}
 
 		
 			.season-section {
@@ -83,7 +58,9 @@
 			}
 			
 			.season-section a{
-				color:#e54a4f;
+				/*color:#e54a4f;*/
+				color:#135267;
+				
 				text-decoration:none;
 			}
 			.season-section ul {
@@ -109,9 +86,9 @@
 				background:#eaeaea;
 			}
 			.season-section h3{
-				font-size:1em;
+				font-size:1.2em;
 				border-radius:5px;
-				
+				font-family: 'Francois One', sans-serif;
 				display:inline-block;
 				padding:5px;
 				margin:0px;
@@ -131,4 +108,19 @@
 			}
 			.section-open ul {
 			    display:block;
+			}
+
+			@media (max-width: 500px) { 
+				.graph-container{
+					
+					float:none;
+					margin:0 auto;
+				}
+				.listing{
+					
+					float:none;
+					margin:0 auto;
+					
+				}
+
 			}
