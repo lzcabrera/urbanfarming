@@ -66,44 +66,43 @@ theseasons.enter().append('path').attr('d', arc_season)
     .attr('class', 'arc')
     .style("stroke", "#eaeaea")
     .attr('class', function (d) {
-    return 'arc_' + d.label.toLowerCase()
-});
+        return 'arc_' + d.label.toLowerCase()
+    });
 
 theseasons.enter().append("text")
     .attr("transform", function (d, i) {
-    return "translate(" + arc_season.centroid(d) + ")";
-})
+        return "translate(" + arc_season.centroid(d) + ")";
+    })
     .attr("text-anchor", "middle")
     .attr("font-family", "sans-serif")
     .attr("font-size", "0.7em")
     .style("fill", "#fff")
     .text(function (d, i) {
-    return d.label;
-});
+        return d.label;
+    });
 
 
 // months
 themonths.enter().append('path').attr('d', arc_month)
     .attr('class', 'arc')
     .attr('class', function (d) {
-    return 'arc_' + d.label.toLowerCase()
-})
+        return 'arc_' + d.label.toLowerCase()
+    })
     .style("fill", function (d, i) {
-    var monthValue = i;
-    return color(monthValue);
-});
+        return color(i);
+    });
 
 themonths.enter().append("text")
     .attr("transform", function (d, i) {
-    return "translate(" + arc_month.centroid(d) + ")";
-})
+        return "translate(" + arc_month.centroid(d) + ")";
+    })
     .attr("text-anchor", "middle")
     .attr("font-family", "sans-serif")
     .attr("font-size", "0.7em")
     .style("fill", "#fff")
     .text(function (d, i) {
-    return d.label;
-});
+        return d.label;
+    });
 
 
 // vegetables  
@@ -114,8 +113,8 @@ thevegetables.enter().append("path").attr('d', arc_vegetable)
     .attr('class', 'arc')
     .attr('class', function (d, i) {
     var state = (d == 1) ? "active" : "passive";
-    return state;
-});
+        return state;
+    });
 
 thevegetables.exit().remove();
 
@@ -126,13 +125,20 @@ function updateChart(model) {
     thevegetables = thevegetables.data(data);
     thevegetables.transition().ease("elastic").duration(dur).attr('class', function (d, i) {
         var state = (d == 1) ? "active" : "passive";
+
+        //var randomnumber=Math.floor(Math.random()*i);
+        //if(state)
+
         return state;
-    });;
+    });
+
+    console.log(vegetable+' +');
 }
 
 $(".season-section h3 a").click(function(e){
     //reset
     e.preventDefault();
+    thevegetables.exit().remove();
     var list = $(this).parent().next();
 
     if($(this).css('backgroundImage').indexOf('collapse') > 0){
@@ -141,19 +147,23 @@ $(".season-section h3 a").click(function(e){
         $(this).css('backgroundImage','url(expand-small-silver.png)');
 
     }else{
+
         $('.season-section ul').hide();
         $(".season-section h3 a").css('backgroundImage','url(expand-small-silver.png)');
 
-        
         list.show();
         $(this).css('backgroundImage','url(collapse-small-silver.png)');
-
     }
+
     
 });
 
 $(".season-section ul a").hover(function () {
-    updateChart(this.href.slice(this.href.indexOf('#') + 1));
+    var newvegetable = this.href.slice(this.href.indexOf('#') + 1);
+    vegetable = newvegetable;
+    updateChart(newvegetable);
+    $('#vegetable-name').html($(this).html());
+    
 });
 
 
