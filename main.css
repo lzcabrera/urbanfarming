@@ -111,6 +111,8 @@
 			}
 
 			@media (max-width: 500px) { 
+				h1{font-size:1.4em;}
+				.season-section h3{font-size:1.1em;}
 				.graph-container{
 					
 					float:none;
