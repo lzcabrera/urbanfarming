@@ -1,8 +1,59 @@
-			body{font-family: 'Crafty Girls', cursive;}
+			html, body{
+				height:100%;
+			}
+
+			body{
+				font-family: 'Crafty Girls', cursive;
+				margin:0 auto;
+				min-height:480px;
+				min-width:320px;
+				position:relative;
+			}
+
+			
+			html #peek, body #peek{
+				min-height:100%;
+			}
+
+			#peek{
+				-webkit-transform:translate(135px, 0);
+				z-index:2;
+				position:relative;
+			}
+
 			.main{
+				
 				max-width:500px;
 				margin:0 auto;
+				
+				position:relative;
+				padding:0;
+				display:block;
+				
+
 			}
+
+
+/***/
+			#flyout-container{
+				
+				max-width:135px;
+				position:fixed;
+				top:0;
+				left:0;
+				bottom:0;
+				background:#eaeaea;
+				overflow-x:hidden;
+				overflow-y:auto;
+				z-index:1;
+			}
+
+			#flyout-container ul{
+				margin:0;
+			}
+/***/
+
+
 			h1{
 				text-align:center;
 				font-family: 'Francois One', sans-serif;
@@ -10,11 +61,11 @@
 			}
 			.graph-container{
 				width:250px;
-				float:left;
+				/*float:left;*/
 			}
 			.chart-legend{
 				text-align:center;
-				margin-top:20px;
+				
 				font-family:Arial, Helvetica, sans-serif;
 				font-size:0.9em;
 			}
@@ -34,7 +85,7 @@
 			}
 			.listing{
 				width:45%;
-				float:left;
+				/*float:left;*/
 				margin-left:5%;
 				
 			}
